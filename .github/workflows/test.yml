@@ -24,7 +24,7 @@ jobs:
         with:
           server_address: smtp.gmail.com
           server_port: 587
-          username: hamzabenkebil123@gmail.com
+          username: ghouti.soh1@gmail.com
           password: ${{ secrets.EMAIL_USERNAME }}
           subject:  ${{ secrets.EMAIL_PASSWORD }}
           body: 'Tests have been completed. Check the results in GitHub Actions logs.'
