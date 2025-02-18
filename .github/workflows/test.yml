@@ -19,15 +19,14 @@ jobs:
       - name: Run tests
         run: pytest
       - name: Send email notification
-        if: always()
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: smtp.gmail.com
-          server_port: 587
-          secure: true
-          username: ghouti.soh1@gmail.com
-          password: ${{ secrets.EMAIL_USERNAME }}
-          subject:  ${{ secrets.EMAIL_PASSWORD }}
-          body: 'Tests have been completed. Check the results in GitHub Actions logs.'
+          server_port: 587  # Port correct pour TLS
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: GitHub Actions Test Results
+          body: "Tests have been completed. Check the results in GitHub Actions logs."
           to: angelinvigaro@gmail.com
           from: GitHub Actions
+          secure: false  # Désactiver secure
