@@ -27,6 +27,6 @@ jobs:
           password: ${{ secrets.EMAIL_PASSWORD }}
           subject: GitHub Actions Test Results
           body: "Tests have been completed. Check the results in GitHub Actions logs."
-          to: angelinvigaro@gmail.com
+          to: cedric.surquin@gmail.com
           from: GitHub Actions
           secure: false  # Désactiver secure
